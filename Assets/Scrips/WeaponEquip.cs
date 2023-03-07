@@ -90,7 +90,7 @@ public class WeaponEquip : MonoBehaviour
         item.transform.localEulerAngles = equipRot;
 
         Equipped = true;
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(1);
         animator.SetBool("EquipSh", false);
 
     }
@@ -103,7 +103,7 @@ public class WeaponEquip : MonoBehaviour
         item.transform.localEulerAngles = restRot;
 
         Equipped = false;
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(1);
         animator.SetBool("EquipSh", false);
     }
 }
