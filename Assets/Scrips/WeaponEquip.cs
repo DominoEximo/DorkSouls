@@ -39,21 +39,24 @@ public class WeaponEquip : MonoBehaviour
     {
         if (Input.GetButtonDown("Equip") && !Equipped)
         {
+            animator.SetLayerWeight(animator.GetLayerIndex("Equip Layer"), 1f);
             animator.SetBool("EquipS", true);
             StartCoroutine(EquipSword(sword, RHand, swordEquipPos, swordEquipRot));
             animator.SetBool("EquipSh", true);
             StartCoroutine(EquipShield(shield, LHand, shieldEquipPos, shieldEquipRot));
-
+            animator.SetBool("CombatState", true);
 
         }
         else if (Input.GetButtonDown("Equip") && Equipped)
         {
+            animator.SetLayerWeight(animator.GetLayerIndex("Equip Layer"), 1f);
             animator.SetBool("EquipS", true);
             StartCoroutine(UnequipSword(sword, Back, swordRestPos, swordRestRot));
             animator.SetBool("EquipSh", true);
             StartCoroutine(UnequipShield(shield, Back, shieldRestPos, shieldRestRot));
-
+            animator.SetBool("CombatState", false);
         }
+        
 
     }
 
@@ -90,8 +93,9 @@ public class WeaponEquip : MonoBehaviour
         item.transform.localEulerAngles = equipRot;
 
         Equipped = true;
-        //yield return new WaitForSeconds(1);
         animator.SetBool("EquipSh", false);
+        yield return new WaitForSeconds(0.7f);
+        animator.SetLayerWeight(animator.GetLayerIndex("Equip Layer"), 0f);
 
     }
     IEnumerator UnequipShield(GameObject item, Transform container, Vector3 restPos, Vector3 restRot)
@@ -103,7 +107,8 @@ public class WeaponEquip : MonoBehaviour
         item.transform.localEulerAngles = restRot;
 
         Equipped = false;
-        //yield return new WaitForSeconds(1);
         animator.SetBool("EquipSh", false);
+        yield return new WaitForSeconds(0.7f);
+        animator.SetLayerWeight(animator.GetLayerIndex("Equip Layer"), 0f);
     }
 }

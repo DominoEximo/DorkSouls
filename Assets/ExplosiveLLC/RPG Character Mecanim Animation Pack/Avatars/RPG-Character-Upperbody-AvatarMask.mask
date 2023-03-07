@@ -11,111 +11,168 @@ AvatarMask:
   m_Elements:
   - m_Path: 
     m_Weight: 1
-  - m_Path: Motion
+  - m_Path: Character_Ghost_01
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_L_Thigh
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_L_Thigh/B_L_Calf
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_L_Thigh/B_L_Calf/B_L_Foot
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_L_Thigh/B_L_Calf/B_L_Foot/B_L_Toe0
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_R_Thigh
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_R_Thigh/B_R_Calf
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_R_Thigh/B_R_Calf/B_R_Foot
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_R_Thigh/B_R_Calf/B_R_Foot/B_R_Toe0
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_Spine
-    m_Weight: 0
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1
+  - m_Path: Character_Ghost_02
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2
+  - m_Path: Character_Goblin_Female
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle
+  - m_Path: Character_Goblin_Male
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm
+  - m_Path: Character_Goblin_Shaman
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm
+  - m_Path: Character_Goblin_WarChief
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand
+  - m_Path: Character_Goblin_Warrior_Female
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger0
+  - m_Path: Character_Goblin_Warrior_Male
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger0/B_L_Finger01
+  - m_Path: Character_Hero_Knight_Female
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger0/B_L_Finger01/B_L_Finger02
+  - m_Path: Character_Hero_Knight_Male
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger1
+  - m_Path: Character_Rock_Golem
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger1/B_L_Finger11
+  - m_Path: Character_Skeleton_Knight
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger1/B_L_Finger11/B_L_Finger12
+  - m_Path: Character_Skeleton_Slave_01
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger2
+  - m_Path: Character_Skeleton_Soldier_01
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger2/B_L_Finger21
+  - m_Path: Character_Skeleton_Soldier_02
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger2/B_L_Finger21/B_L_Finger22
+  - m_Path: Character_Tormented_Soul
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger3
+  - m_Path: Root
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger3/B_L_Finger31
+  - m_Path: Root/Hips
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger3/B_L_Finger31/B_L_Finger32
+  - m_Path: Root/Hips/SM_Item_Bag_Large
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger4
+  - m_Path: Root/Hips/SM_Item_Bags
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger4/B_L_Finger41
+  - m_Path: Root/Hips/SM_Item_Bones
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_L_Clavicle/B_L_UpperArm/B_L_Forearm/B_L_Hand/B_L_Finger4/B_L_Finger41/B_L_Finger42
+  - m_Path: Root/Hips/SM_Item_Horn
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_Neck
+  - m_Path: Root/Hips/SM_Item_Shrooms
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_Neck/B_Head
+  - m_Path: Root/Hips/SM_Item_Shrunken_Head
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle
+  - m_Path: Root/Hips/Spine_01
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm
+  - m_Path: Root/Hips/Spine_01/Spine_02
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm
+  - m_Path: Root/Hips/Spine_01/Spine_02/SM_Item_Goblin_WarBanner
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand
+  - m_Path: Root/Hips/Spine_01/Spine_02/SM_Item_Shield
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger0
+  - m_Path: Root/Hips/Spine_01/Spine_02/SM_Item_Sword
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger0/B_R_Finger01
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger0/B_R_Finger01/B_R_Finger02
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger1/B_R_Finger11
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger1/B_R_Finger11/B_R_Finger12
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger2
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/Finger_01
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger2/B_R_Finger21
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/Finger_01/Finger_02
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger2/B_R_Finger21/B_R_Finger22
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/Finger_01/Finger_02/Finger_03
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger3
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/Finger_01/Finger_02/Finger_03/Finger_04
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger3/B_R_Finger31
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/IndexFinger_01
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger3/B_R_Finger31/B_R_Finger32
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/IndexFinger_01/IndexFinger_02
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger4
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/IndexFinger_01/IndexFinger_02/IndexFinger_03
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger4/B_R_Finger41
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/IndexFinger_01/IndexFinger_02/IndexFinger_03/IndexFinger_04
     m_Weight: 1
-  - m_Path: Motion/B_Pelvis/B_Spine/B_Spine1/B_Spine2/B_R_Clavicle/B_R_UpperArm/B_R_Forearm/B_R_Hand/B_R_Finger4/B_R_Finger41/B_R_Finger42
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/Thumb_01
     m_Weight: 1
-  - m_Path: RPG-Character-Mesh
-    m_Weight: 0
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/Thumb_01/Thumb_02
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_L/Shoulder_L/Elbow_L/Hand_L/Thumb_01/Thumb_02/Thumb_03
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/Finger_01
+      1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/Finger_01
+      1/Finger_02 1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/Finger_01
+      1/Finger_02 1/Finger_03 1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/Finger_01
+      1/Finger_02 1/Finger_03 1/Finger_04 1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/IndexFinger_01
+      1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/IndexFinger_01
+      1/IndexFinger_02 1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/IndexFinger_01
+      1/IndexFinger_02 1/IndexFinger_03 1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/IndexFinger_01
+      1/IndexFinger_02 1/IndexFinger_03 1/IndexFinger_04 1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/Thumb_01
+      1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/Thumb_01
+      1/Thumb_02 1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R/Thumb_01
+      1/Thumb_02 1/Thumb_03 1
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Neck
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Neck/Head
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Neck/Head/Eyebrows
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Neck/Head/Eyes
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Neck/Head/SM_Item_Goblin_Hair
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Neck/Head/SM_Item_Mask_01
+    m_Weight: 1
+  - m_Path: Root/Hips/Spine_01/Spine_02/Spine_03/Neck/Head/SM_Item_Mask_02
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_L
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_L/LowerLeg_L
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_L/LowerLeg_L/Ankle_L
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_L/LowerLeg_L/Ankle_L/Ball_L
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_L/LowerLeg_L/Ankle_L/Ball_L/Toes_L
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_R
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_R/LowerLeg_R
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_R/LowerLeg_R/Ankle_R
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_R/LowerLeg_R/Ankle_R/Ball_R
+    m_Weight: 1
+  - m_Path: Root/Hips/UpperLeg_R/LowerLeg_R/Ankle_R/Ball_R/Toes_R
+    m_Weight: 1
