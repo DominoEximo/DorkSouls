@@ -10,6 +10,10 @@ public class Attack : MonoBehaviour
     private float attackCD = 1;
     public BoxCollider SwordHB;
 
+    //Combo
+    private static int numberOfClicks;
+    private float nextFireTime = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
