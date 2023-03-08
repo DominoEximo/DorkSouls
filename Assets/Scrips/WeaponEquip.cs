@@ -12,7 +12,7 @@ public class WeaponEquip : MonoBehaviour
     public Transform RHand;
     public Transform LHand;
     public Transform Back;
-    bool Equipped;
+    public bool Equipped;
 
 
     //Sword positions and rotations
