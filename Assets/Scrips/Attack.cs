@@ -8,12 +8,14 @@ public class Attack : MonoBehaviour
     private Animator animator;
     private WeaponEquip weaponEquip;
     private float attackCD = 1;
+    public BoxCollider SwordHB;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
         weaponEquip = GetComponent<WeaponEquip>();
+        SwordHB.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -21,10 +23,13 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && weaponEquip.Equipped && (attackCD <=0))
         {
+            SwordHB.enabled = true;
             StartCoroutine(AttackWithSword1());
+            
         }
         else
         {
+            
             attackCD -= Time.deltaTime;
         }
         
@@ -33,7 +38,10 @@ public class Attack : MonoBehaviour
     private IEnumerator AttackWithSword1()
     {
         animator.SetBool("AttackS1", true);
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.44f);
+        SwordHB.enabled = false;
+        yield return new WaitForSeconds(0.36f);
         animator.SetBool("AttackS1", false);
+        
     }
 }

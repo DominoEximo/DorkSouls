@@ -13,7 +13,9 @@ public class Hazard : MonoBehaviour
     {
         if (other.GetComponent<Health>())
         {
+            
             other.GetComponent<Health>().TakeDamage(Damage, BypassInvincibility);
+            
             
         }
     }

@@ -3342,6 +3342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6f50490586f5a43bce924b4367cf48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SwordHB: {fileID: 1675896207}
 --- !u!1001 &1055325307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3596,7 +3597,7 @@ BoxCollider:
   m_GameObject: {fileID: 1675896204}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.942545, y: 130, z: 9.165517}
   m_Center: {x: 2.1350255, y: 0.00000023331172, z: -0.41724247}
