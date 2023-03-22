@@ -29,32 +29,25 @@ public class Attack : MonoBehaviour
     {
         Debug.Log(""+numberOfClicks);
 
-        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && animator.GetCurrentAnimatorStateInfo(0).IsName("AttackS1"))
-        {
-            animator.SetBool("AttackS1", false);
-        }
-        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && animator.GetCurrentAnimatorStateInfo(0).IsName("AttackS2"))
-        {
-            animator.SetBool("AttackS2", false);
-        }
-        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && animator.GetCurrentAnimatorStateInfo(0).IsName("AttackS3"))
-        {
-            animator.SetBool("AttackS3", false);
-            numberOfClicks = 0;
-        }
+        
         if (Time.time - lastClickedTime > maxComboDelay)
         {
             numberOfClicks = 0;
+            animator.SetLayerWeight(animator.GetLayerIndex("Combo Layer"), 0);
+            animator.SetBool("AttackS1", false);
+            animator.SetBool("AttackS2", false);
             animator.SetBool("AttackS3", false);
         }
         if (Time.time > nextFireTime)
         {
             if (Input.GetButtonDown("Fire1") && weaponEquip.Equipped)
             {
+                
                 SwordHB.enabled = true;
                 Combo();
-
+                
             }
+
            
         }
 
@@ -94,6 +87,8 @@ public class Attack : MonoBehaviour
 
     void Combo()
     {
+
+        animator.SetLayerWeight(animator.GetLayerIndex("Combo Layer"), 1f);
         lastClickedTime = Time.time;
         numberOfClicks++;
         if (numberOfClicks == 1)
@@ -115,6 +110,8 @@ public class Attack : MonoBehaviour
             StartCoroutine(AttackWithSword3());
             
         }
+        
+
 
     }
 }
