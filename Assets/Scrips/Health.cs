@@ -8,12 +8,26 @@ public class Health : MonoBehaviour
     public float HP;
     private float InvincibleAmt;
 
+    private Animator animator;
+
+
+
+    void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (InvincibleAmt > 0) 
         { 
             InvincibleAmt -= Time.deltaTime;
+        }
+
+        if (this.HP <= 0)
+        {
+            animator.SetBool("Dead", true);
         }
 
     }
