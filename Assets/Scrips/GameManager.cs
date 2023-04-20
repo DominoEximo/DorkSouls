@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject Camera;
     public GameObject DeathSign;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,9 @@ public class GameManager : MonoBehaviour
             StartCoroutine("Death_restart");
         }
 
+
+        
+
         
             
         
@@ -39,4 +43,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         UnityEngine.Cursor.lockState = CursorLockMode.None;
     }
+
+    
+    
 }
