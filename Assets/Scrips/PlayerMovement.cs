@@ -147,12 +147,11 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        //characterController.Move(moveDirection * Time.deltaTime);
-        rb.AddForce(moveDirection * Time.fixedDeltaTime, ForceMode.Impulse);
+        rb.AddForce(moveDirection * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
         velocity.y += gravity * Time.fixedDeltaTime;
-        //characterController.Move(velocity * Time.deltaTime);
-        rb.AddForce(velocity * Time.fixedDeltaTime, ForceMode.Impulse);
+
+        rb.AddForce(velocity * Time.fixedDeltaTime);
 
 
     }
