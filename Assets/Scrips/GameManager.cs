@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject Camera;
     public GameObject DeathSign;
+    public TextMeshProUGUI Win;
     
 
     // Start is called before the first frame update
@@ -42,6 +44,20 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         UnityEngine.Cursor.lockState = CursorLockMode.None;
+    }
+
+
+    public void WinGameOver() 
+    {
+    
+        Win.gameObject.SetActive(true);
+        Player.GetComponent<WeaponEquip>().enabled = false;
+        Player.GetComponent<PlayerMovement>().enabled = false;
+        Camera.GetComponent<ThirdPersonCam>().enabled = false;
+        Player.GetComponent<Block>().enabled = false;
+        Player.GetComponent<Attack>().enabled = false;
+        StartCoroutine(Death_restart());
+
     }
 
     

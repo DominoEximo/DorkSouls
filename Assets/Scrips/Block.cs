@@ -5,7 +5,7 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
 
-    private Animator animator;
+    public Animator animator;
     private WeaponEquip weaponEquip;
     public BoxCollider ShieldHB;
 
@@ -29,6 +29,7 @@ public class Block : MonoBehaviour
             animator.SetLayerWeight(animator.GetLayerIndex("Combo Layer"), 1f);
             ShieldHB.enabled = true;
             Blocking();
+           
         }
         
     }
@@ -37,6 +38,7 @@ public class Block : MonoBehaviour
     void Blocking()
     {
         animator.SetBool("isBlocking", true);
+        
         
 
     }
