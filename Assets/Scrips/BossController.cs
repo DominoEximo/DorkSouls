@@ -14,6 +14,7 @@ public class BossController : MonoBehaviour
     public GameObject FogWall;
     public Health HP;
     public GameManager GM;
+    public AudioSource BlockSound;
     NavMeshAgent agent;
     Animator animator;
     float comboCD = 0;
@@ -52,6 +53,7 @@ public class BossController : MonoBehaviour
                 if (WeaponHitBox.GetComponent<Hazard>().gotBlocked == true)
                 {
                     StartCoroutine(Blocked());
+                    BlockSound.Play();
                 }
                 if (comboCD <= 0)
                 {
@@ -113,7 +115,7 @@ public class BossController : MonoBehaviour
         animator.SetBool("Attack1", true);
         WeaponHitBox.GetComponent<BoxCollider>().enabled = true;
         yield return new WaitForSeconds(1f);
-        WeaponHitBox.GetComponent<BoxCollider>().enabled = false;
+        
         agent.speed = 3.5f;
         StartCoroutine(Attack2());
         
@@ -125,7 +127,7 @@ public class BossController : MonoBehaviour
         animator.SetBool("Attack1", false);
         WeaponHitBox.GetComponent<BoxCollider>().enabled = true;
         yield return new WaitForSeconds(1f);
-        WeaponHitBox.GetComponent<BoxCollider>().enabled = false;
+        
         agent.speed = 3.5f;
         StartCoroutine(Attack3());
 
@@ -137,7 +139,7 @@ public class BossController : MonoBehaviour
         animator.SetBool("Attack2", false);
         WeaponHitBox.GetComponent<BoxCollider>().enabled = true;
         yield return new WaitForSeconds(1f);
-        WeaponHitBox.GetComponent<BoxCollider>().enabled = false;
+
         animator.SetBool("Attack3", false);
         agent.speed = 3.5f;
 

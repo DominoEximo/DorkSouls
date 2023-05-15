@@ -15,6 +15,7 @@ public class Attack : MonoBehaviour
     private float nextFireTime = 0f;
     float lastClickedTime = 0;
     float maxComboDelay = 1;
+    public AudioSource Swing;
 
     // Start is called before the first frame update
     void Start()
@@ -53,18 +54,28 @@ public class Attack : MonoBehaviour
                     {
                         animator.SetLayerWeight(animator.GetLayerIndex("Combo Layer"), 1f);
                         SwordHB.enabled = true;
-                        Combo();
+                        if (attackCD <= 0)
+                        {
+                            Combo();
+                        }
+                        
+                        
                         
                     }
+                    else { attackCD -= Time.deltaTime; }
                     break;
                 case true:
                     if (Input.GetButtonDown("Fire1") && weaponEquip.Equipped)
                     {
                         animator.SetLayerWeight(animator.GetLayerIndex("Combo Layer"), 1f);
                         SwordHB.enabled = true;
-                        HeavyCombo();
-                        
+                        if (attackCD <= 0)
+                        {
+                            HeavyCombo();
+                        }
+
                     }
+                    else { attackCD -= Time.deltaTime; }
                     break;
                 
             }
@@ -82,6 +93,7 @@ public class Attack : MonoBehaviour
     #region Light_Attack
     private IEnumerator AttackWithSword1()
     {
+        
         animator.SetBool("AttackS1", true);
         yield return new WaitForSeconds(0.44f);
         SwordHB.enabled = false;
@@ -92,6 +104,7 @@ public class Attack : MonoBehaviour
     }
     private IEnumerator AttackWithSword2()
     {
+        
         animator.SetBool("AttackS2", true);
         yield return new WaitForSeconds(0.44f);
         SwordHB.enabled = false;
@@ -101,6 +114,7 @@ public class Attack : MonoBehaviour
     }
     private IEnumerator AttackWithSword3()
     {
+        
         animator.SetBool("AttackS3", true);
         yield return new WaitForSeconds(0.44f);
         SwordHB.enabled = false;
@@ -116,6 +130,7 @@ public class Attack : MonoBehaviour
 
     private IEnumerator HeavyAttack1()
     {
+        
         animator.SetBool("HeavyAttack1", true);
         yield return new WaitForSeconds(0.44f);
         SwordHB.enabled = false;
@@ -124,6 +139,7 @@ public class Attack : MonoBehaviour
     }
     private IEnumerator HeavyAttack2()
     {
+        
         animator.SetBool("HeavyAttack2", true);
         yield return new WaitForSeconds(0.44f);
         SwordHB.enabled = false;
@@ -132,6 +148,7 @@ public class Attack : MonoBehaviour
     }
     private IEnumerator HeavyAttack3()
     {
+        
         animator.SetBool("HeavyAttack3", true);
         yield return new WaitForSeconds(0.44f);
         SwordHB.enabled = false;
@@ -155,7 +172,8 @@ public class Attack : MonoBehaviour
         if (numberOfClicks == 1)
         {
             StartCoroutine(AttackWithSword1());
-            
+            Swing.Play();
+
         }
         numberOfClicks = Mathf.Clamp(numberOfClicks, 0, 3);
         
@@ -164,7 +182,8 @@ public class Attack : MonoBehaviour
         {
             animator.SetBool("AttackS1", false);
             StartCoroutine(AttackWithSword2());
-            
+            Swing.Play();
+
         }
 
         
@@ -172,7 +191,9 @@ public class Attack : MonoBehaviour
         {
             animator.SetBool("AttackS2", false);
             StartCoroutine(AttackWithSword3());
-            
+            Swing.Play();
+            attackCD = 2f;
+
         }
         
 
@@ -189,20 +210,24 @@ public class Attack : MonoBehaviour
         if (numberOfClicks == 1 )
         {
             StartCoroutine(HeavyAttack1());
+            Swing.Play();
         }
 
         if (numberOfClicks == 2 )
         {
             animator.SetBool("HeavyAttack1", false);
             StartCoroutine(HeavyAttack2());
-            
+            Swing.Play();
+
         }
 
         if (numberOfClicks == 3 )
         {
             animator.SetBool("HeavyAttack2", false);
             StartCoroutine(HeavyAttack3());
-            
+            Swing.Play();
+            attackCD = 2f;
+
         }
     }
 }
