@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -9,17 +10,23 @@ public class Health : MonoBehaviour
     private float InvincibleAmt;
 
     private Animator animator;
+    public Slider HpBar;
+
 
 
 
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        SetMaxHealth(HP);
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        SetHealth(HP);
+
         if (InvincibleAmt > 0) 
         { 
             InvincibleAmt -= Time.deltaTime;
@@ -72,5 +79,21 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(dly);
         Debug.Log("Invincible");
         InvincibleAmt = invincLength;
+    }
+
+
+    public void SetMaxHealth(float HP) 
+    {
+
+        HpBar.maxValue = HP;
+        HpBar.value = HP;
+    
+    }
+
+    public void SetHealth(float HP) 
+    {
+
+        HpBar.value = HP;
+
     }
 }

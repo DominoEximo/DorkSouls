@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
 
 
+    [Header("Audio")]
+    public AudioSource walkOnGrass;
+    public AudioSource runOnGrass;
+
     private void Start()
     {
         hp = GetComponent<Health>();
@@ -103,31 +107,43 @@ public class PlayerMovement : MonoBehaviour
 
             if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.D))
             {
+                runOnGrass.enabled = false;
+                walkOnGrass.enabled = true;
                 StrafeRight();
             }
             else if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.A))
             {
+                runOnGrass.enabled = false;
+                walkOnGrass.enabled = true;
                 StrafeLeft();
             }
             else if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.S))
             {
+                runOnGrass.enabled = false;
+                walkOnGrass.enabled = true;
                 WalkBack();
             }
             else if (moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
             {
+                runOnGrass.enabled = false;
+                walkOnGrass.enabled = true;
                 Walk();
 
             }
             else if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
             {
+                walkOnGrass.enabled = false;
+                runOnGrass.enabled = true;
                 Run();
 
             }
             else if (moveDirection == Vector3.zero)
             {
                 Idle();
-
+                walkOnGrass.enabled = false;
+                runOnGrass.enabled = false;
             }
+            
 
 
             moveDirection *= moveSpeed;
@@ -138,11 +154,13 @@ public class PlayerMovement : MonoBehaviour
             if (rotation != 0)
             {
                 RotationAnim();
+                
             }
             else
             {
                 animator.SetBool("rotatingLeft", false);
                 animator.SetBool("rotatingRight", false);
+                
             }
 
         }
@@ -160,6 +178,7 @@ public class PlayerMovement : MonoBehaviour
     #region Basic Movement
     private void WalkBack()
     {
+        
         moveSpeed = StrafeSpeed;
         animator.SetFloat("Speed", -0.5f, 0.1f, Time.deltaTime);
         animator.SetBool("isStrafing", false);
@@ -168,6 +187,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void StrafeRight()
     {
+        
         moveSpeed = StrafeSpeed;
         animator.SetBool("isStrafing", true);
         animator.SetBool("isIdle", false);
@@ -176,6 +196,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void StrafeLeft()
     {
+        
         moveSpeed = StrafeSpeed;
         animator.SetBool("isStrafing", true);
         animator.SetBool("isIdle", false);
@@ -193,6 +214,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Walk()
     {
+        
         moveSpeed = walkSpeed;
         animator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
         animator.SetBool("isStrafing", false);

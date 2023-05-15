@@ -10,6 +10,8 @@ public class BossController : MonoBehaviour
     public float lookRadius = 10f;
     public Transform Target;
     public GameObject WeaponHitBox;
+    public GameObject HpBar;
+    public GameObject FogWall;
     public Health HP;
     public GameManager GM;
     NavMeshAgent agent;
@@ -24,6 +26,8 @@ public class BossController : MonoBehaviour
         Target = PlayerManager.instance.player.transform;
         animator = GetComponent<Animator>();
         HP = GetComponent<Health>();
+        HpBar.SetActive(false);
+        FogWall.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,7 +39,8 @@ public class BossController : MonoBehaviour
 
         if (distance <= lookRadius && !isDead)
         {
-
+            HpBar.SetActive(true);
+            FogWall.SetActive(true);
 
 
             if (distance <= agent.stoppingDistance)
@@ -104,31 +109,37 @@ public class BossController : MonoBehaviour
 
     IEnumerator Attack1() 
     {
+        agent.speed = 0;
         animator.SetBool("Attack1", true);
         WeaponHitBox.GetComponent<BoxCollider>().enabled = true;
         yield return new WaitForSeconds(1f);
         WeaponHitBox.GetComponent<BoxCollider>().enabled = false;
+        agent.speed = 3.5f;
         StartCoroutine(Attack2());
         
     }
     IEnumerator Attack2()
     {
+        agent.speed = 0;
         animator.SetBool("Attack2", true);
         animator.SetBool("Attack1", false);
         WeaponHitBox.GetComponent<BoxCollider>().enabled = true;
         yield return new WaitForSeconds(1f);
         WeaponHitBox.GetComponent<BoxCollider>().enabled = false;
+        agent.speed = 3.5f;
         StartCoroutine(Attack3());
 
     }
     IEnumerator Attack3()
     {
+        agent.speed = 0;
         animator.SetBool("Attack3", true);
         animator.SetBool("Attack2", false);
         WeaponHitBox.GetComponent<BoxCollider>().enabled = true;
         yield return new WaitForSeconds(1f);
         WeaponHitBox.GetComponent<BoxCollider>().enabled = false;
         animator.SetBool("Attack3", false);
+        agent.speed = 3.5f;
 
     }
 
