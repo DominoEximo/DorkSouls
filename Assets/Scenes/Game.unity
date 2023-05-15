@@ -15265,6 +15265,8 @@ GameObject:
   - component: {fileID: 6707278128590062511}
   - component: {fileID: 6732718108067168003}
   - component: {fileID: 6723547879248883733}
+  - component: {fileID: 6732718108067168004}
+  - component: {fileID: 6732718108067168005}
   m_Layer: 0
   m_Name: SM_Wep_Slayer_01
   m_TagString: Untagged
@@ -15338,6 +15340,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6710005800111271951}
   m_Mesh: {fileID: 4300000, guid: 14ea9cc0dfadeda4884072a6e2b5c1cf, type: 3}
+--- !u!65 &6732718108067168004
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710005800111271951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.047038987, y: 1.3974712, z: 0.23448573}
+  m_Center: {x: -0.009304463, y: 0.9473041, z: -0.0033883646}
+--- !u!114 &6732718108067168005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710005800111271951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b91abaf408241349af27d04a95b63a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 10
+  BypassInvincibility: 0
 --- !u!64 &6749480875502240460
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17025,8 +17054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 30
-  Target: {fileID: 0}
-  WeaponHitBox: {fileID: 0}
+  Target: {fileID: 828468565}
+  WeaponHitBox: {fileID: 6732718108067168004}
 --- !u!114 &7451617499412797066
 MonoBehaviour:
   m_ObjectHideFlags: 0

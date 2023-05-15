@@ -30,19 +30,28 @@ public class BossController : MonoBehaviour
 
         if (distance <= lookRadius)
         {
-            agent.SetDestination(Target.position);
-            animator.SetBool("isChasing", true);
-            
 
-            if (distance <= agent.stoppingDistance) 
-                
+
+
+            if (distance <= agent.stoppingDistance)
+
             {
+                animator.SetBool("inRange", true);
+                animator.SetBool("isChasing", false);
                 //Attack
-
+                while (animator.GetBool("inRange") == true) { Attack(); }
+                
 
                 //FaceTowardsPlayer
                 FaceTarget();
-                agent.SetDestination(transform.position);
+
+
+            }
+            else 
+            {
+                animator.SetBool("isChasing", true);
+                animator.SetBool("inRange", false);
+                agent.SetDestination(Target.position);
                 
             }
         }
@@ -50,12 +59,36 @@ public class BossController : MonoBehaviour
         
     }
 
+    void Attack() 
+    {
+        StartCoroutine(Attack1());
+    }
+    
 
-    void basicCombo() 
+    IEnumerator Attack1() 
     {
         animator.SetBool("Attack1", true);
+        WeaponHitBox.enabled = true;
+        yield return new WaitForSeconds(1f);
+        WeaponHitBox.enabled = false;
+        StartCoroutine(Attack2());
+        
+    }
+    IEnumerator Attack2()
+    {
+        animator.SetBool("Attack2", true);
+        WeaponHitBox.enabled = true;
+        yield return new WaitForSeconds(1f);
+        WeaponHitBox.enabled = false;
+        StartCoroutine(Attack3());
 
-
+    }
+    IEnumerator Attack3()
+    {
+        animator.SetBool("Attack3", true);
+        WeaponHitBox.enabled = true;
+        yield return new WaitForSeconds(1f);
+        WeaponHitBox.enabled = false;
 
     }
 
