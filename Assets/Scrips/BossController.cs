@@ -20,6 +20,8 @@ public class BossController : MonoBehaviour
     float comboCD = 0;
     bool isDead = false;
     public bool secondPhase;
+    bool musicOn = false;
+    AudioSource bossMusic;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,8 @@ public class BossController : MonoBehaviour
         HpBar.SetActive(false);
         FogWall.SetActive(false);
         BlockSound.SetActive(false);
+        bossMusic = GetComponent<AudioSource>();
+        bossMusic.enabled = false;
     }
 
     // Update is called once per frame
@@ -42,6 +46,8 @@ public class BossController : MonoBehaviour
 
         if (distance <= lookRadius && !isDead)
         {
+            bossMusic.enabled = true;
+            
             HpBar.SetActive(true);
             FogWall.SetActive(true);
 
@@ -170,6 +176,7 @@ public class BossController : MonoBehaviour
     {
         if (HP.HP <= 0) 
         {
+            bossMusic.enabled = false;
             StopCoroutine(Attack1());
             StopCoroutine(Attack2());
             StopCoroutine(Attack3());
