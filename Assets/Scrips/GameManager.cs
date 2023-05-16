@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         if (Player.GetComponent<Health>().HP <= 0)
         { 
             Player.GetComponent<PlayerMovement>().enabled = false;
+            Player.GetComponent<Attack>().enabled = false;
             Camera.GetComponent<ThirdPersonCam>().enabled = false;
             DeathSign.GetComponent<MeshRenderer>().enabled = true;
             StartCoroutine("Death_restart");

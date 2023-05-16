@@ -12,13 +12,14 @@ public class BossController : MonoBehaviour
     public GameObject WeaponHitBox;
     public GameObject HpBar;
     public GameObject FogWall;
-    public Health HP;
+    public BossHealth HP;
     public GameManager GM;
-    public AudioSource BlockSound;
+    public GameObject BlockSound;
     NavMeshAgent agent;
     Animator animator;
     float comboCD = 0;
     bool isDead = false;
+    public bool secondPhase;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +27,10 @@ public class BossController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         Target = PlayerManager.instance.player.transform;
         animator = GetComponent<Animator>();
-        HP = GetComponent<Health>();
+        HP = GetComponent<BossHealth>();
         HpBar.SetActive(false);
         FogWall.SetActive(false);
+        BlockSound.SetActive(false);
     }
 
     // Update is called once per frame
@@ -52,8 +54,10 @@ public class BossController : MonoBehaviour
                 //Attack
                 if (WeaponHitBox.GetComponent<Hazard>().gotBlocked == true)
                 {
+
+                    BlockSound.SetActive(true);
                     StartCoroutine(Blocked());
-                    BlockSound.Play();
+                    
                 }
                 if (comboCD <= 0)
                 {
@@ -63,7 +67,7 @@ public class BossController : MonoBehaviour
                 }
                 else 
                 {
-                    Debug.Log(comboCD);
+                    
                     comboCD -= Time.deltaTime;
                 }
 
@@ -93,13 +97,16 @@ public class BossController : MonoBehaviour
 
     IEnumerator Blocked() 
     {
+
         agent.speed = 0;
         StopCoroutine(Attack1());
         StopCoroutine(Attack2());
         StopCoroutine(Attack3());
         animator.SetBool("gotBlocked", true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.2f);
+        BlockSound.SetActive(false);
         animator.SetBool("gotBlocked", false);
+        WeaponHitBox.GetComponent<Hazard>().gotBlocked = false;
         agent.speed = 3.5f;
     }
 

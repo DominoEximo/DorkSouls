@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour
+public class BossHealth : MonoBehaviour
 {
 
     public float HP;
@@ -15,9 +15,12 @@ public class Health : MonoBehaviour
 
 
 
+
     void Start()
     {
+        HP = HP * PlayerPrefs.GetFloat("identicator");
         animator = GetComponentInChildren<Animator>();
+        Debug.Log(PlayerPrefs.GetFloat("identicator"));
         SetMaxHealth(HP);
     }
 

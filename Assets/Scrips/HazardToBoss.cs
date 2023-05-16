@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Hazard : MonoBehaviour
+public class HazardToBoss : MonoBehaviour
 {
     public GameObject player;
     public AudioSource GSHit;
@@ -24,7 +24,7 @@ public class Hazard : MonoBehaviour
     // Start is called before the first frame update
     void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Health>())
+        if (other.GetComponent<BossHealth>())
         {
             
             try
@@ -42,7 +42,7 @@ public class Hazard : MonoBehaviour
                 else 
                 {
                     if (other == player.GetComponent<CapsuleCollider>() && gotBlocked == false) { GSHit.Play(); }
-                    other.GetComponent<Health>().TakeDamage(Damage, BypassInvincibility);
+                    other.GetComponent<BossHealth>().TakeDamage(Damage, BypassInvincibility);
                     hitBox.enabled = false;
                 }
             }
@@ -62,7 +62,7 @@ public class Hazard : MonoBehaviour
 
     void OnTriggerExit(Collider other) 
     {
-        if (other.GetComponent<Health>()) { gotBlocked = false; }
+        if (other.GetComponent<BossHealth>()) { gotBlocked = false; }
     }
 
 }
