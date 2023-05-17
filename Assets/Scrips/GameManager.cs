@@ -61,6 +61,21 @@ public class GameManager : MonoBehaviour
 
     }
 
+
+
+    public void exitGame()
+    {
+
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+
+    }
+
+    public void openMainMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
     
     
 }
