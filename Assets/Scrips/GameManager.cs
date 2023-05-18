@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject Camera;
     public GameObject DeathSign;
     public TextMeshProUGUI Win;
+    public TextMeshProUGUI bombs;
+    public int bombCounter = 3;
     
 
     // Start is called before the first frame update
@@ -30,6 +32,8 @@ public class GameManager : MonoBehaviour
             DeathSign.GetComponent<MeshRenderer>().enabled = true;
             StartCoroutine("Death_restart");
         }
+
+        bombs.SetText("Bombs: {}/3",bombCounter);
 
 
         

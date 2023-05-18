@@ -9,6 +9,10 @@ public class Attack : MonoBehaviour
     private WeaponEquip weaponEquip;
     private float attackCD = 2f;
     public BoxCollider SwordHB;
+    public GameManager GM;
+    public float bombCD = 5f;
+    public GameObject bomb;
+    public Transform player;
 
     //Combo
     public static int numberOfClicks = 0;
@@ -31,7 +35,11 @@ public class Attack : MonoBehaviour
     void Update()
     {
 
-
+        if (Input.GetKeyDown(KeyCode.E) && bombCD <= 0 && GM.bombCounter > 0)
+        {
+            bombPlant();
+        }
+        else { bombCD -= Time.deltaTime; }
 
         
         bool heavyIndicator = Input.GetKey(KeyCode.LeftShift);
@@ -174,6 +182,17 @@ public class Attack : MonoBehaviour
 
     #endregion
 
+
+    #region Bomb
+
+    void bombPlant() 
+    {
+        Instantiate(bomb, player.position, new Quaternion(0.210447073f, -0.23880139f, -0.685028732f, 0.655302644f));
+        bombCD = 5f;
+        GM.bombCounter -= 1;
+    }
+
+    #endregion
 
     void Combo()
     {
