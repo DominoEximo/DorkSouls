@@ -18,7 +18,11 @@ public class BossHealth : MonoBehaviour
 
     void Start()
     {
-        HP = HP * PlayerPrefs.GetFloat("identicator");
+        if (PlayerPrefs.GetFloat("identicator") > 0)
+        {
+            HP = HP * PlayerPrefs.GetFloat("identicator");
+        }else { HP = HP; }
+        
         animator = GetComponentInChildren<Animator>();
         Debug.Log(PlayerPrefs.GetFloat("identicator"));
         SetMaxHealth(HP);

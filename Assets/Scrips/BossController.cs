@@ -182,7 +182,7 @@ public class BossController : MonoBehaviour
             StopCoroutine(Attack3());
             StopCoroutine(Blocked());
             isDead = true;
-            agent.Stop();
+            agent.isStopped = true;
             animator.SetBool("Dead", true);
             GM.WinGameOver();
             
